@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import { Button } from "../style/styled";
 import { FaChevronRight } from "react-icons/fa";
 import { BsCameraVideo } from "react-icons/bs";
+import TokenomicsPdf from "../static/EVAATokenomics.pdf"
 
 const JoinUs = styled.div`
 	display: flex;
@@ -55,10 +56,13 @@ const FinalInvitation = () => {
 				lending.
 			</p>
 			<Tokenomics>
+				<a href = {TokenomicsPdf} target = "_blank">
+
 				<Button>
 					Tokenomics
 					<FaChevronRight size={10} style={{ marginLeft: "1em" }} />
 				</Button>
+				</a>
 				<div>
 					<BsCameraVideo size={24} color="white" />
 				</div>

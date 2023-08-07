@@ -126,7 +126,8 @@ const Texts = styled.div`
 		color: #3854cc;
 		font-size: 44px;
 		font-weight: 800;
-		margin-bottom: 0;
+		margin-bottom: 12px;
+		line-height: 40px;
 	}
 
 	p {
@@ -239,13 +240,23 @@ const SellingPoints = () => {
 				"Our innovative protocol allows borrowers to access capital quickly and easily, while providing lenders with a high-yield investment opportunity.",
 		},
 		{
-			title: "Lorem ipsum dolor sit amet",
-			description: "Blah blah blah blah blah blah blah",
+			title: "Our platform utilizes",
+			description: "Our platform utilizes cutting-edge blockchain technology to ensure the safety and security of all transactions.",
 		},
 		{
-			title: "sdgsdfgdsfgdsfgsdfg",
+			title: "All loan agreements and repayments",
 			description:
-				"sghjyufndrtbvdrthbfdnhgfghndfdsvdsfjgvdhfjkvbdhfjvbajehlvblkfbvhijkfdavbhdiakfbvhfdkvbvbhjkfdvbvb",
+				"All loan agreements and repayments are recorded on the blockchain, providing an immutable and transparent record of all activity.",
+		},
+		{
+			title: "User-friendly and easy to navigate",
+			description:
+				"Our platform is user-friendly and easy to navigate, making it simple for borrowers and lenders to connect and conduct business.",
+		},
+		{
+			title: "Customer support",
+			description:
+				"And our dedicated customer support team is available to assist you with any questions or concerns you may have.",
 		},
 	]);
 	const [chosenText, setChosenText] = useState(0);
@@ -261,7 +272,9 @@ const SellingPoints = () => {
 						users lend or borrow assets without going to a centralized
 						intermediary.
 					</p>
-					<Button>Application</Button>
+					<a href="https://app.evaa.finance/">
+						<Button>Application</Button>
+					</a>
 				</Texts>
 				<ImagesTop>
 					<img src={duck} alt="Duck holding TONcoin" />
@@ -300,7 +313,7 @@ const SellingPoints = () => {
 				<Texts>
 					<h3>Why EVAA</h3>
 					<div className="argument">
-						<Medal width="24"/>
+						<Medal width="24" />
 						<p>
 							<b>First on TON</b>
 							EVAA Protocol is the first TON blockchain lending protocol
@@ -321,10 +334,12 @@ const SellingPoints = () => {
 							The protocol is based on smart contracts — fully decentralized
 						</p>
 					</div>
-					<Button>
-						Dashboard
-						<FaChevronRight size={10} style={{ marginLeft: "1em" }} />
-					</Button>
+					<a href="https://app.evaa.finance/">
+						<Button>
+							Dashboard
+							<FaChevronRight size={10} style={{ marginLeft: "1em" }} />
+						</Button>
+					</a>
 				</Texts>
 				<Images>
 					<Blob2 />

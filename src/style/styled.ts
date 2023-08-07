@@ -13,6 +13,7 @@ export const Button = styled.button`
 	border: none;
 	cursor: pointer;
 	font-size: 20px;
+	href: "";
 
 	&:active {
 		background-color: #304dd1;

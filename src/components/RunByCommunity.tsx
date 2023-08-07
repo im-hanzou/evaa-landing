@@ -40,6 +40,11 @@ const InvitationButton = styled(Button)`
 	background-color: white;
 	color: #4761d0;
 	align-self: end;
+	a {
+		color: #6272ca;
+		cursor: pointer;
+		text-decoration: none;
+	}
 `;
 
 const Roadmap = () => {
@@ -48,10 +53,14 @@ const Roadmap = () => {
 			<Blob3 />
 			<h1>Enjoy fully decentralized platform operated by community</h1>
 			<p>Evaa Protocol is brilliant example of community governance.</p>
-			<InvitationButton>
-				Dashboard
-				<FaChevronRight size={10} style={{ marginLeft: "1em" }} />
-			</InvitationButton>
+
+				<InvitationButton>
+			<a href="https://app.evaa.finance/">
+					Dashboard
+			</a>
+					<FaChevronRight size={10} style={{ marginLeft: "1em" }} />
+				</InvitationButton>
+
 		</InvitationContainer>
 	);
 };

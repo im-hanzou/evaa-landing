@@ -5,6 +5,7 @@ const Links = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 400px !important;
+	cursor: pointer !important;
 
 	p {
 		color: #3854cc;
@@ -39,7 +40,7 @@ const DropDownItem = styled.div`
 const DropDownMenu = styled.div`
 	display: none;
 	position: absolute;
-
+	
 	${DropDownItem}:hover > & {
 		display: block;
 		flex-direction: column;
@@ -47,6 +48,10 @@ const DropDownMenu = styled.div`
 		width: 10em;
 		border-radius: 10px;
 		box-shadow: 0 2px 5px #aaa;
+	}
+
+	&:hover {
+		display: block;
 	}
 
 	.linkContainer {
@@ -68,7 +73,7 @@ const DropDownMenu = styled.div`
 		}
 
 		a:hover {
-			background-color: rgba(56, 135, 204, 0.3);
+			// background-color: rgba(56, 135, 204, 0.3);
 			color: #3854cc;
 		}
 	}
@@ -87,23 +92,23 @@ const DropDownMenu = styled.div`
 const NavLinks = () => {
 	return (
 		<Links>
-			<p>HOME</p>
+			<p >HOME</p>
 			<DropDownItem>
 				<p>
 					COMMUNITY <FaChevronDown className="menuItemArrow" />
 				</p>
 				<DropDownMenu>
 					<div className="linkContainer">
-						<a href="#">Lorem</a>
+						<a href="https://t.me/evaaprotocol">Telegram</a>
 					</div>
 					<div className="linkContainer">
-						<a href="#">Ipsum</a>
+						<a href="https://t.me/EvaaProtocolHub/"> Evaa Hub</a>
 					</div>
 					<div className="linkContainer">
-						<a href="#">Dolor</a>
+						<a href="https://twitter.com/evaaprotocol/">Twitter</a>
 					</div>
 					<div className="linkContainer">
-						<a href="#">Sit</a>
+						<a href="https://medium.com/@evaaprotocol/">Medium</a>
 					</div>
 				</DropDownMenu>
 			</DropDownItem>
@@ -113,7 +118,7 @@ const NavLinks = () => {
 				</p>
 				<DropDownMenu>
 					<div className="linkContainer">
-						<a href="#">Amet</a>
+						<a href="https://github.com/evaafi/docs">Documentation</a>
 					</div>
 				</DropDownMenu>
 			</DropDownItem>

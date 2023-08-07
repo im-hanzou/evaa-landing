@@ -36,7 +36,11 @@ const Header = () => {
 				</div>
 				<NavLinks />
 				<div className="navbarItem">
-					<Button>App</Button>
+					<a href="https://app.evaa.finance/" >
+						<Button >
+							App
+						</Button>
+					</a>
 				</div>
 			</div>
 		</Navbar>

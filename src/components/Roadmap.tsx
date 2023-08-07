@@ -1,13 +1,18 @@
 import { styled } from "styled-components";
+import { LiaBitcoin	} from 'react-icons/lia'
+import { LiaBoxOpenSolid } from 'react-icons/lia'
+import { LiaClipboard } from 'react-icons/lia'
+import { LiaMoneyCheckSolid } from 'react-icons/lia'
+import { LuMessageSquare } from 'react-icons/lu'
+import { SlPencil } from 'react-icons/sl';
 import { SlScreenDesktop } from "react-icons/sl";
 import { useEffect } from "react";
 
 const RoadmapContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: start;
+	align-items: center;
 	align-self: center;
-	width: 86%;
 	margin-bottom: 320px;
 
 	h1 {
@@ -21,7 +26,7 @@ const RoadmapContainer = styled.div`
 const Content = styled.div`
 	display: flex;
 	border-top: 3px solid #3854cc;
-	width: 100%;
+	width: 80%;
 	overflow-y: visible;
 	overflow-x: hidden;
 	scroll-snap-type: x mandatory;
@@ -108,20 +113,20 @@ const Roadmap = () => {
 	useEffect(() => {
 		const roadmap = document.getElementById("roadmapContent");
 		const interval = setInterval(() => {
-            const scrollLeft = roadmap?.scrollLeft ?? 0;
-            const scrollWidth = roadmap?.scrollWidth ?? 0;
-            const offsetWidth = roadmap?.offsetWidth ?? 0;
+			const scrollLeft = roadmap?.scrollLeft ?? 0;
+			const scrollWidth = roadmap?.scrollWidth ?? 0;
+			const offsetWidth = roadmap?.offsetWidth ?? 0;
 			if (scrollLeft !== scrollWidth - offsetWidth) {
 				roadmap?.scrollBy({
-					left: 100,
+					left: 90,
 					behavior: "smooth",
 				});
 			} else {
-                roadmap?.scroll({
+				roadmap?.scroll({
 					left: 0,
 					behavior: "smooth",
 				});
-            }
+			}
 		}, 3000);
 		return () => clearInterval(interval);
 	}, []);
@@ -135,10 +140,10 @@ const Roadmap = () => {
 					<Line></Line>
 					<Checkpoint className="checkpoint">
 						<Icon className="icon">
-							<SlScreenDesktop size={30} />
+							<SlPencil size={30} />
 						</Icon>
-						<DateAnnotation>May, 2023</DateAnnotation>
-						<Explanation>Testnet v2 Starts</Explanation>
+						<DateAnnotation>December, 2022</DateAnnotation>
+						<Explanation>Concept planning</Explanation>
 					</Checkpoint>
 				</CheckpointContainer>
 				<CheckpointContainer>
@@ -146,10 +151,10 @@ const Roadmap = () => {
 					<Line></Line>
 					<Checkpoint className="checkpoint">
 						<Icon className="icon">
-							<SlScreenDesktop size={30} />
+							<LiaClipboard size={30} />
 						</Icon>
-						<DateAnnotation>May, 2023</DateAnnotation>
-						<Explanation>Testnet v2 Starts</Explanation>
+						<DateAnnotation>Q2, 2023</DateAnnotation>
+						<Explanation>Testnet v1 Starts</Explanation>
 					</Checkpoint>
 				</CheckpointContainer>
 				<CheckpointContainer>
@@ -157,10 +162,10 @@ const Roadmap = () => {
 					<Line></Line>
 					<Checkpoint className="checkpoint">
 						<Icon className="icon">
-							<SlScreenDesktop size={30} />
+							<LiaMoneyCheckSolid size={30} />
 						</Icon>
-						<DateAnnotation>May, 2023</DateAnnotation>
-						<Explanation>Testnet v2 Starts</Explanation>
+						<DateAnnotation>Q3, 2023</DateAnnotation>
+						<Explanation>Mainnet v1 Starts</Explanation>
 					</Checkpoint>
 				</CheckpointContainer>
 				<CheckpointContainer>
@@ -168,10 +173,10 @@ const Roadmap = () => {
 					<Line></Line>
 					<Checkpoint className="checkpoint">
 						<Icon className="icon">
-							<SlScreenDesktop size={30} />
+							<LuMessageSquare size={30} />
 						</Icon>
-						<DateAnnotation>May, 2023</DateAnnotation>
-						<Explanation>Testnet v2 Starts</Explanation>
+						<DateAnnotation>Q4, 2023</DateAnnotation>
+						<Explanation>DAO BETA</Explanation>
 					</Checkpoint>
 				</CheckpointContainer>
 				<CheckpointContainer>
@@ -179,10 +184,10 @@ const Roadmap = () => {
 					<Line></Line>
 					<Checkpoint className="checkpoint">
 						<Icon className="icon">
-							<SlScreenDesktop size={30} />
+							<LiaBoxOpenSolid size={30} />
 						</Icon>
-						<DateAnnotation>May, 2023</DateAnnotation>
-						<Explanation>Testnet v2 Starts</Explanation>
+						<DateAnnotation>Q1, 2024</DateAnnotation>
+						<Explanation>SDK for Apps</Explanation>
 					</Checkpoint>
 				</CheckpointContainer>
 				<CheckpointContainer>
@@ -190,43 +195,10 @@ const Roadmap = () => {
 					<Line></Line>
 					<Checkpoint className="checkpoint">
 						<Icon className="icon">
-							<SlScreenDesktop size={30} />
+							<LiaBitcoin size={30} />
 						</Icon>
-						<DateAnnotation>May, 2023</DateAnnotation>
-						<Explanation>Testnet v2 Starts</Explanation>
-					</Checkpoint>
-				</CheckpointContainer>
-				<CheckpointContainer>
-					<Intersection></Intersection>
-					<Line></Line>
-					<Checkpoint className="checkpoint">
-						<Icon className="icon">
-							<SlScreenDesktop size={30} />
-						</Icon>
-						<DateAnnotation>May, 2023</DateAnnotation>
-						<Explanation>Testnet v2 Starts</Explanation>
-					</Checkpoint>
-				</CheckpointContainer>
-				<CheckpointContainer>
-					<Intersection></Intersection>
-					<Line></Line>
-					<Checkpoint className="checkpoint">
-						<Icon className="icon">
-							<SlScreenDesktop size={30} />
-						</Icon>
-						<DateAnnotation>May, 2023</DateAnnotation>
-						<Explanation>Testnet v2 Starts</Explanation>
-					</Checkpoint>
-				</CheckpointContainer>
-				<CheckpointContainer>
-					<Intersection></Intersection>
-					<Line></Line>
-					<Checkpoint className="checkpoint">
-						<Icon className="icon">
-							<SlScreenDesktop size={30} />
-						</Icon>
-						<DateAnnotation>May, 2023</DateAnnotation>
-						<Explanation>Testnet v2 Starts</Explanation>
+						<DateAnnotation>Q2, 2024</DateAnnotation>
+						<Explanation>Naitive TON Stablecoin</Explanation>
 					</Checkpoint>
 				</CheckpointContainer>
 			</Content>
