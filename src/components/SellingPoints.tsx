@@ -46,6 +46,13 @@ const Point = styled.div`
 			left: 0;
 		}
 	}
+
+	@media only screen and (max-width: 880px) {
+		padding: 0px 0px 0px 17px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px
+    } 
 `;
 
 const SecondPoint = styled.div`
@@ -177,6 +184,9 @@ const Texts = styled.div`
 			margin-right: 1em;
 		}
 	}
+	@media only screen and (max-width: 880px) {
+		width: 100%;
+    } 
 `;
 
 const ImagesTop = styled.div`
@@ -192,6 +202,22 @@ const ImagesTop = styled.div`
 		bottom: 50px;
 		left: 50%;
 	}
+
+	@media only screen and (max-width: 880px) {
+		position: relative;
+		width: 100%;	
+		img {
+			position: relative;
+			right: -100px;
+			width: 367.79px;
+			height: 290px;
+		}
+		svg {
+			position: absolute;
+			bottom: 50px;
+			left: 50%;
+		}
+    }
 `;
 
 const Images = styled.div`

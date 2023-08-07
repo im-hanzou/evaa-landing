@@ -34,6 +34,22 @@ const InvitationContainer = styled.div`
 		left: -155px;
 		z-index: -1;
 	}
+
+	@media only screen and (max-width: 880px) {
+		width: 100%;
+		gap: 20px;
+		border-radius: 0px;
+
+		h1 {
+			font-size: 33px;
+			font-weight: 700;
+			margin: 0;
+		}
+		
+		& > svg {
+			display: none;
+		}
+	}
 `;
 
 const InvitationButton = styled(Button)`
@@ -45,6 +61,9 @@ const InvitationButton = styled(Button)`
 		cursor: pointer;
 		text-decoration: none;
 	}
+	@media only screen and (max-width: 880px) {
+		align-self: center;
+	}
 `;
 
 const Roadmap = () => {
@@ -54,12 +73,12 @@ const Roadmap = () => {
 			<h1>Enjoy fully decentralized platform operated by community</h1>
 			<p>Evaa Protocol is brilliant example of community governance.</p>
 
-				<InvitationButton>
-			<a href="https://app.evaa.finance/">
+			<InvitationButton>
+				<a href="https://app.evaa.finance/">
 					Dashboard
-			</a>
-					<FaChevronRight size={10} style={{ marginLeft: "1em" }} />
-				</InvitationButton>
+				</a>
+				<FaChevronRight size={10} style={{ marginLeft: "1em" }} />
+			</InvitationButton>
 
 		</InvitationContainer>
 	);

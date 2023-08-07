@@ -18,6 +18,38 @@ const Coins = styled.div`
 		height: 90px;
 		object-fit: cover;
 	}
+
+	.firstRow{
+		display: flex;
+		justify-content: space-between;
+		width: 53%
+	}
+	.secondRow{
+		display: flex;
+		justify-content: space-between;
+		width: 33%
+	}
+
+	@media only screen and (max-width: 880px) {
+		display: flex;
+		flex-direction: column;
+
+		gap: 50px;
+
+		.firstRow{
+			display: flex;
+			justify-content: space-around;
+			width: 100%
+		}
+
+		.secondRow{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			gap: 50px;
+		}
+	}
+
 `;
 
 const MainContent = styled.main`
@@ -32,11 +64,15 @@ const Main = () => {
 		<MainContent>
 			<SellingPoints />
 			<Coins>
-				<img src={bitcoin} alt="Bitcoin" />
-				<img src={ethereum} alt="Ethereum" />
-				<img src={ton} alt="TON" />
-				<img src={tether} alt="Tether" />
-				<img src={usdt} alt="USDT" />
+				<div className="firstRow">
+					<img src={bitcoin} alt="Bitcoin" />
+					<img src={ethereum} alt="Ethereum" />
+					<img src={ton} alt="TON" />
+				</div>
+				<div className="secondRow">
+					<img src={tether} alt="Tether" />
+					<img src={usdt} alt="USDT" />
+				</div >
 			</Coins>
 			<Roadmap />
 			<RunByCommunity />

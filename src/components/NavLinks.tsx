@@ -10,6 +10,9 @@ const Links = styled.div`
 	p {
 		color: #3854cc;
 	}
+	@media only screen and (max-width: 880px) {
+		display: none;
+    }  
 `;
 
 const DropDownItem = styled.div`

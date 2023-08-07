@@ -21,6 +21,11 @@ const RoadmapContainer = styled.div`
 		font-weight: 800;
 		margin-bottom: 2em;
 	}
+
+	@media only screen and (max-width: 880px) {
+		margin-bottom: 115px;
+	}
+
 `;
 
 const Content = styled.div`
@@ -30,6 +35,12 @@ const Content = styled.div`
 	overflow-y: visible;
 	overflow-x: hidden;
 	scroll-snap-type: x mandatory;
+
+	@media only screen and (max-width: 880px) {
+		width: 250px;
+
+	}
+
 `;
 
 const CheckpointContainer = styled.div`

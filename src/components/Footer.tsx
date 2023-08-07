@@ -16,6 +16,12 @@ const FooterContainer = styled.footer`
 	font-weight: bold;
 	font-family: Montserrat;
 	width: 100%;
+
+	@media only screen and (max-width: 880px) {
+		flex-direction: column-reverse;
+		gap: 17px;
+		padding: 30px 0px 30px;
+	}
 `;
 
 const FooterLogo = styled.div`

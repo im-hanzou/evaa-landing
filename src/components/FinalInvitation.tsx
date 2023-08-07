@@ -27,6 +27,22 @@ const JoinUs = styled.div`
 	b {
 		color: #3854cc;
 	}
+
+	@media only screen and (max-width: 880px) {
+		margin-block-start: 2em;
+		margin-block-end: 3em;
+		h1 {
+			margin-block-end: 0;
+			font-size: 33px;
+			font-weight: 800;
+		}
+		p {
+			margin-block-end: 3em;
+			margin-block-start: 0;
+			font-size: 22px;
+			color: #ADB9CB;
+		}
+	}
 `;
 
 const Tokenomics = styled.div`

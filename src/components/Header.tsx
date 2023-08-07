@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import NavLinks from "./NavLinks";
 import logo from "../assets/evaa-logo.png";
 import { Button } from "../style/styled";
+import { LuMenu } from "react-icons/lu";
 
 const Navbar = styled.nav`
 	background-color: white;
@@ -24,7 +25,15 @@ const Navbar = styled.nav`
 	.navbarItem {
 		display: flex;
 		width: 200px;
-	}
+	} 
+`;
+
+const MobileMenu = styled.button`
+	display: none;
+
+	@media only screen and (max-width: 880px) {
+		display: flex;
+    } 
 `;
 
 const Header = () => {
@@ -42,6 +51,10 @@ const Header = () => {
 						</Button>
 					</a>
 				</div>
+				<MobileMenu>
+					<LuMenu size={45} />
+					<NavLinks />
+				</MobileMenu>
 			</div>
 		</Navbar>
 	);
