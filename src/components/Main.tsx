@@ -34,7 +34,7 @@ const Coins = styled.div`
 	@media only screen and (max-width: 880px) {
 		display: flex;
 		flex-direction: column;
-		margin: 90px 125px;
+		margin: 50px 125px;
 		gap: 50px;
 
 		.firstRow{

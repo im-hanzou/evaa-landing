@@ -51,7 +51,7 @@ const Point = styled.div`
 		padding: 0px 0px 0px 17px;
 		display: flex;
 		flex-direction: column;
-		gap: 20px
+		gap: 20px;
 
 		&:nth-child(2) {
 			flex-direction: row-reverse;
@@ -310,6 +310,7 @@ const Texts = styled.div`
 			display: flex;
 			text-align: start;
 		} 
+		
     } 
 `;
 const TextsStart = styled.div`
@@ -413,6 +414,36 @@ const TextsStart = styled.div`
 		flex-direction: column;
 		text-align: start;
 		align-items: flex-start;
+		
+		h1 {
+			background-image: linear-gradient(
+				89.83deg,
+				#3854cc -5.92%,
+				#278ce5 -5.91%,
+				#4c65d1 85.36%
+			);
+			background-size: 100%;
+			background-repeat: repeat;
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			-moz-background-clip: text;
+			-moz-text-fill-color: transparent;
+			font-size: 120px;
+			line-height: 120px;
+			font-weight: 900;
+			letter-spacing: 6px;
+			margin-block-end: 0;
+			margin-top: -20px;
+	
+			&:nth-child(2) {
+				display: inline-block;
+				margin-top: -40px;
+				font-size: 90px;
+				line-height: 128px;
+				letter-spacing: 0;
+				font-weight: 800;
+			}
 
 		a {
 			display: flex;

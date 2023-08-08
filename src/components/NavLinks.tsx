@@ -51,6 +51,7 @@ const DropDownMenu = styled.div`
 		width: 10em;
 		border-radius: 10px;
 		box-shadow: 0 2px 5px #aaa;
+		z-index: 999;
 	}
 
 	&:hover {
@@ -97,9 +98,7 @@ const NavLinks = () => {
 		<Links>
 			<p >HOME</p>
 			<DropDownItem>
-				<p>
-					COMMUNITY <FaChevronDown className="menuItemArrow" />
-				</p>
+				<p> COMMUNITY <FaChevronDown className="menuItemArrow" /> </p>
 				<DropDownMenu>
 					<div className="linkContainer">
 						<a href="https://t.me/evaaprotocol">Telegram</a>
