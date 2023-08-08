@@ -3,10 +3,12 @@ import NavLinks from "./NavLinks";
 import logo from "../assets/evaa-logo.png";
 import { Button } from "../style/styled";
 import { LuMenu } from "react-icons/lu";
+import { useState } from "react";
 
 const Navbar = styled.nav`
 	background-color: white;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	font-weight: bold;
@@ -14,7 +16,7 @@ const Navbar = styled.nav`
 	font-family: Montserrat;
 	width: 100%;
 	
-	& > div {
+	& > div:first-child {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -26,18 +28,72 @@ const Navbar = styled.nav`
 	.navbarItem {
 		display: flex;
 		width: 200px;
+		margin-left: 20px;
 	} 
+
+	.mobileMenu{
+		display: none;
+	}
+
+
+
+	@media only screen and (max-width: 880px) {
+
+		& > div:first-child {
+			padding: 40px 127px 0px 127px;
+		}
+
+		.mobileMenu{
+			width: 100%;
+			align-self: flex-start;
+			display: flex;
+			padding: 10px 10px;
+			z-index: 999;
+
+
+			#links a {
+				color: black;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 17px;
+				display: flex;
+			}
+		
+			#links a:hover {
+				background-color: #3854cc;
+				color: white;
+			}
+		
+			.active {
+				background-color: black;
+				color: white;
+			}
+		}
 `;
 
-const MobileMenu = styled.button`
+const MobileMenuButton = styled.button`
 	display: none;
 
+	
 	@media only screen and (max-width: 880px) {
 		display: flex;
     } 
 `;
 
 const Header = () => {
+	const [showMenu, setShowMenu] = useState(false);
+
+	let menu;
+	if (showMenu) {
+		menu = <div id="links">
+			<a href="https://t.me/evaaprotocol">Telegram</a>
+			<a href="https://t.me/EvaaProtocolHub/"> Evaa Hub</a>
+			<a href="https://twitter.com/evaaprotocol/">Twitter</a>
+			<a href="https://medium.com/@evaaprotocol/">Medium</a>
+			<a href="https://github.com/evaafi/docs">Documentation</a>
+		</div>
+	};
+
 	return (
 		<Navbar>
 			<div>
@@ -52,12 +108,13 @@ const Header = () => {
 						</Button>
 					</a>
 				</div>
-				<MobileMenu>
-					<LuMenu size={45} />
+				<MobileMenuButton>
+					<LuMenu size={45} onClick={() => setShowMenu(!showMenu)} />
 					<NavLinks />
-				</MobileMenu>
+				</MobileMenuButton>
 			</div>
-		</Navbar>
+			<div className="mobileMenu">{menu}</div>
+		</Navbar >
 	);
 };
 

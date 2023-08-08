@@ -4,7 +4,6 @@ import duck from "../assets/duck.png";
 import macbook from "../assets/macbook.png";
 import diamond from "../assets/diamond.png";
 import tonforduck from "../assets/tonforduck.svg";
-import { ReactComponent as TonCoin } from "../assets/toncoin.svg";
 import Blob1 from "../assets/blob-1.svg";
 import { ReactComponent as Blob2 } from "../assets/blob-2.svg";
 import { ReactComponent as Medal } from "../assets/medal-icon.svg";
@@ -48,7 +47,7 @@ const Point = styled.div`
 	}
 
 	@media only screen and (max-width: 880px) {
-		padding: 0px 0px 0px 17px;
+		padding: 30px 0px 0px 17px;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
