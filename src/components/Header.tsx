@@ -28,7 +28,7 @@ const Navbar = styled.nav`
 	.navbarItem {
 		display: flex;
 		width: 200px;
-		margin-left: 20px;
+		margin-left: 121px;
 	} 
 
 	.mobileMenu{
@@ -38,6 +38,11 @@ const Navbar = styled.nav`
 
 
 	@media only screen and (max-width: 880px) {
+		.navbarItem {
+			display: flex;
+			width: 200px;
+			margin-left: 20px;
+		} 
 
 		& > div:first-child {
 			padding: 40px 127px 0px 127px;
