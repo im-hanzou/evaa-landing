@@ -13,13 +13,14 @@ const Navbar = styled.nav`
 	font-size: 16px;
 	font-family: Montserrat;
 	width: 100%;
-
+	
 	& > div {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
 		padding: 40px 127px;
+		gap: 10px;
 	}
 
 	.navbarItem {

@@ -22,7 +22,8 @@ const Coins = styled.div`
 	.firstRow{
 		display: flex;
 		justify-content: space-between;
-		width: 53%
+		width: 53%;
+		gap: 40px;
 	}
 	.secondRow{
 		display: flex;
@@ -33,7 +34,7 @@ const Coins = styled.div`
 	@media only screen and (max-width: 880px) {
 		display: flex;
 		flex-direction: column;
-
+		margin: 90px 125px;
 		gap: 50px;
 
 		.firstRow{

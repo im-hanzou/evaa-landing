@@ -3,8 +3,9 @@ import { Button } from "../style/styled";
 import duck from "../assets/duck.png";
 import macbook from "../assets/macbook.png";
 import diamond from "../assets/diamond.png";
+import tonforduck from "../assets/tonforduck.svg";
 import { ReactComponent as TonCoin } from "../assets/toncoin.svg";
-import { ReactComponent as Blob1 } from "../assets/blob-1.svg";
+import Blob1 from "../assets/blob-1.svg";
 import { ReactComponent as Blob2 } from "../assets/blob-2.svg";
 import { ReactComponent as Medal } from "../assets/medal-icon.svg";
 import { ReactComponent as Cross } from "../assets/cross-icon.svg";
@@ -39,7 +40,6 @@ const Point = styled.div`
 	&:last-child {
 		img {
 			position: relative;
-			left: 50px;
 		}
 
 		svg {
@@ -52,6 +52,30 @@ const Point = styled.div`
 		display: flex;
 		flex-direction: column;
 		gap: 20px
+
+		&:nth-child(2) {
+			flex-direction: row-reverse;
+			align-items: center;
+	
+			img {
+				position: absolute;
+				left: 70px;
+				top: 50px;
+				width: 650px;
+			}
+			svg {
+				position: relative;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+			}
+		}
+
+		&:last-child {
+			img {
+				position: relative;
+			}
+		}
     } 
 `;
 
@@ -59,6 +83,61 @@ const SecondPoint = styled.div`
 	display: flex;
 	justify-content: space-between;
 	font-weight: bold;
+	margin-bottom: 250px;
+
+	&:nth-child(2) {
+		flex-direction: row-reverse;
+		align-items: center;
+
+		img:first-child  {
+			position: absolute;
+			left: 35px;
+			top: 50px;
+			width: 650px;
+		}
+		img:last-child {
+			position: relative;
+			bottom: -100px;
+			left: 0;
+			width: 700px;
+		}
+	}
+
+
+	@media only screen and (max-width: 880px) {
+		display: flex;
+		flex-direction: column-reverse;
+		margin-bottom: 275px;
+		gap:50px;
+
+		&:nth-child(2) {
+			flex-direction: column-reverse;
+			align-items: center;
+	
+			img:first-child {
+				position: absolute;
+				left: -200px;
+				top: -15px;
+				width: 495px;
+			}
+			img:last-child {
+				position: relative;
+				width: 500px;
+				height: auto;
+				top: 15px;
+				left: -65% !important;
+			}
+		}
+
+	}
+
+`;
+
+const ThirdPoint = styled.div`
+	display: flex;
+	justify-content: space-between;
+	font-weight: bold;
+	padding: 0px 0px 0px 127px;
 
 	&:nth-child(2) {
 		flex-direction: row-reverse;
@@ -66,7 +145,7 @@ const SecondPoint = styled.div`
 
 		img {
 			position: absolute;
-			left: 35px;
+			left: 70px;
 			top: 50px;
 			width: 650px;
 		}
@@ -81,13 +160,43 @@ const SecondPoint = styled.div`
 	&:last-child {
 		img {
 			position: relative;
-			left: 50px;
 		}
 
 		svg {
 			left: 0;
 		}
 	}
+
+	@media only screen and (max-width: 880px) {
+		padding: 0px 0px 0px 17px;
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 20px
+
+		&:nth-child(2) {
+			flex-direction: row-reverse;
+			align-items: center;
+	
+			img {
+				position: absolute;
+				left: 70px;
+				top: 50px;
+				width: 650px;
+			}
+			svg {
+				position: relative;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+			}
+		}
+
+		&:last-child {
+			img {
+				position: relative;
+			}
+		}
+    } 
 `;
 
 const Texts = styled.div`
@@ -186,36 +295,164 @@ const Texts = styled.div`
 	}
 	@media only screen and (max-width: 880px) {
 		width: 100%;
+		margin-top: 80px;
+		margin-bottom: 100px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+
+		a {
+			display: flex;
+			justify-content: center;
+		}
+		div:first-of-type {
+			display: flex;
+			text-align: start;
+		} 
+    } 
+`;
+const TextsStart = styled.div`
+	text-align: start;
+	width: 45%;
+
+	h1 {
+		background-image: linear-gradient(
+			89.83deg,
+			#3854cc -5.92%,
+			#278ce5 -5.91%,
+			#4c65d1 85.36%
+		);
+		background-size: 100%;
+		background-repeat: repeat;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-moz-background-clip: text;
+		-moz-text-fill-color: transparent;
+		font-size: 128px;
+		line-height: 120px;
+		font-weight: 900;
+		letter-spacing: 6px;
+		margin-block-end: 0;
+
+		&:nth-child(2) {
+			display: inline-block;
+			margin-top: -30px;
+			font-size: 108px;
+			line-height: 128px;
+			letter-spacing: 0;
+			font-weight: 800;
+		}
+
+		& + p {
+			margin-top: 1em;
+			font-weight: 700;
+		}
+	}
+
+	h3 {
+		color: #3854cc;
+		font-size: 44px;
+		font-weight: 800;
+		margin-bottom: 12px;
+		line-height: 40px;
+	}
+
+	p {
+		color: #8792a4;
+		margin-bottom: 2em;
+		font-size: 24px;
+		line-height: 32px;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		min-height: 4em;
+		font-weight: 600;
+		margin-top: 0;
+	}
+
+	b {
+		color: #54729b;
+	}
+
+	.argument {
+		width: 100%;
+		display: flex;
+
+		&:first-of-type {
+			margin-top: 2em;
+		}
+
+		&:last-of-type {
+			margin-bottom: 2em;
+		}
+
+		p {
+			margin-top: 0;
+			margin-bottom: 40px;
+			width: 85%;
+		}
+
+		b {
+			display: block;
+			color: black;
+			font-size: 30px;
+			font-weight: 800;
+			margin-bottom: 10px;
+		}
+
+		svg {
+			margin-top: 0.5em;
+			margin-right: 1em;
+		}
+	}
+	@media only screen and (max-width: 880px) {
+		width: 100%;
+		margin-bottom: 100px;
+		display: flex;
+		flex-direction: column;
+		text-align: start;
+		align-items: flex-start;
+
+		a {
+			display: flex;
+			justify-content: center;
+		}
+		div:first-of-type {
+			display: flex;
+			text-align: start;
+		} 
     } 
 `;
 
 const ImagesTop = styled.div`
 	position: relative;
 	width: 65%;	
-	img {
+	img:first-of-type {
 		position: relative;
 		right: -100px;
 	}
 
-	svg {
+	img:last-of-type {
 		position: absolute;
 		bottom: 50px;
 		left: 50%;
+		width: 300px;
 	}
 
 	@media only screen and (max-width: 880px) {
 		position: relative;
 		width: 100%;	
-		img {
-			position: relative;
-			right: -100px;
-			width: 367.79px;
-			height: 290px;
+		img:first-of-type  {
+			right: -62px;
+			width: 381px;
+			top: -64px;
 		}
-		svg {
+		img:last-of-type {
 			position: absolute;
-			bottom: 50px;
-			left: 50%;
+    		bottom: 80px;
+    		left: 50%;
+    		width: 121px;
 		}
     }
 `;
@@ -232,6 +469,51 @@ const Images = styled.div`
 		position: absolute;
 		bottom: 50px;
 		left: 50%;
+	}
+	@media only screen and (max-width: 880px) {
+		img:first-of-type  {
+			position: relative;
+			right: 60px;
+			width: 330px;
+		}
+		img:last-of-type {
+			position: absolute;
+    		bottom: 20px;
+    		left: -45% !important;
+    		width: 300px;
+			height: 300px;
+		}
+	}
+`;
+
+const ImagesBottom = styled.div`
+	position: relative;
+	width: 50%;	
+	img {
+		position: relative;
+		right: -100px;
+	}
+
+	svg {
+		position: absolute;
+		bottom: 50px;
+		left: 50%;
+	}
+	@media only screen and (max-width: 880px) {
+		svg {
+			position: absolute;
+			width: 341px;
+			height: 300px;
+			left: -37%!important;
+			top: -324px;
+		}
+		img:last-of-type {
+			position: absolute;
+    		bottom: 0px;
+    		left: -25% !important;
+    		width: 385px;
+			height: auto;
+		}
 	}
 `;
 
@@ -259,6 +541,7 @@ type CarouselItems = {
 	description: string;
 };
 const SellingPoints = () => {
+	// eslint-disable-next-line
 	const [carouselItems, setCarouselItems] = useState<CarouselItems[]>([
 		{
 			title: "Our innovative protocol",
@@ -290,7 +573,7 @@ const SellingPoints = () => {
 	return (
 		<div>
 			<Point>
-				<Texts>
+				<TextsStart>
 					<h1>EVAA</h1>
 					<h1>protocol</h1>
 					<p>
@@ -301,21 +584,15 @@ const SellingPoints = () => {
 					<a href="https://app.evaa.finance/">
 						<Button>Application</Button>
 					</a>
-				</Texts>
+				</TextsStart>
 				<ImagesTop>
 					<img src={duck} alt="Duck holding TONcoin" />
-					<svg width="300" height="300">
-						<defs>
-							<linearGradient id="tonColor" x1="0" x2="0" y1="0" y2="1">
-								<stop offset="0%" stopColor="#4C65D1" />
-								<stop offset="100%" stopColor="#7669F7" />
-							</linearGradient>
-						</defs>
-						<circle cx="150" cy="150" r="150" fill="url(#tonColor)" />
-						<TonCoin width="150" height="150" x="80" y="80" />
-					</svg>
+					<img src={tonforduck} alt="TonCoin to hold" />
 				</ImagesTop>
 			</Point>
+
+
+
 			<SecondPoint>
 				<Texts>
 					<h3>{carouselItems[chosenText].title}</h3>
@@ -331,12 +608,16 @@ const SellingPoints = () => {
 					</CarouselIndicatorContainer>
 				</Texts>
 				<Images>
-					<Blob1 />
+					<img src={Blob1} alt="Blob1" />
 					<img src={macbook} alt="Macbook with EVAA on screen" />
 				</Images>
 			</SecondPoint>
-			<Point>
-				<Texts>
+
+
+
+
+			<ThirdPoint>
+				<TextsStart>
 					<h3>Why EVAA</h3>
 					<div className="argument">
 						<Medal width="24" />
@@ -366,12 +647,12 @@ const SellingPoints = () => {
 							<FaChevronRight size={10} style={{ marginLeft: "1em" }} />
 						</Button>
 					</a>
-				</Texts>
-				<Images>
+				</TextsStart>
+				<ImagesBottom>
 					<Blob2 />
 					<img src={diamond} alt="Macbook with EVAA on screen" />
-				</Images>
-			</Point>
+				</ImagesBottom>
+			</ThirdPoint>
 		</div>
 	);
 };
